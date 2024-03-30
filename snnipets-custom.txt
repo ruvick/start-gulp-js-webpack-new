@@ -1,0 +1,1156 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// html =====================================================================================
+	"logo": {
+		"prefix": "logo",
+		"body": "<a href=\"#\" class=\"header__logo logo-icon\"><img src=\"img/icons/logo.svg\" loading=\"lazy\" alt=\"Логотип\"></a>",
+		"description": "logo"
+	},
+	"img": {
+		"prefix": "img",
+		"body": "<img src=\"img/$0\" loading=\"lazy\" alt=\"Картинка\">",
+		"description": "img"
+	},
+	"lazy": {
+		"scope": "html,kit",
+		"prefix": "ll",
+		"body": [
+			"<picture>\n\t<source loading=\"lazy\" class=\"_lazy\" data-srcset=\"$1\" type=\"image/webp\" srcset=\"img/icons/loading.gif\">\n\t<img loading=\"lazy\" data-src=\"$1\" class=\"_lazy\" alt=\"\" src=\"img/icons/loading.gif\">\n</picture>"
+		],
+		"description": "lazy"
+	},
+	"svg": {
+		"prefix": "svg",
+		"body": "<svg>\n\t<use xlink:href=\"#$1\"></use>\n</svg>",
+		"description": "svg"
+	},
+	"menu": {
+		"prefix": "menu",
+		"body": "<div class=\"header__menu menu\">\n\t<nav class=\"menu__body\">\n\t\t<ul class=\"menu__list\">\n\t\t\t<li class=\"menu__item\"><a href=\"\" class=\"menu__link\"></a></li>\n\t\t</ul>\n\t</nav>\n</div>",
+		"description": "menu"
+	},
+	"menu-sub": {
+		"prefix": "sublist",
+		"body": "<ul class=\"menu__sub-list\">\n\t<li class=\"menu__sub-item\"><a href=\"\" class=\"menu__sub-link\"></a></li>\n</ul>",
+		"description": "sub-list"
+	},
+	"burger": {
+		"prefix": "burg",
+		"body": "<button type=\"button\" class=\"menu__icon icon-menu\">\n\t<span></span>\n\t<span></span>\n\t<span></span>\n</button>",
+		"description": "burger"
+	},
+	"phone": {
+		"prefix": "tel",
+		"body": "<a href=\"tel:$0\" class=\"__phone\"></a>",
+		"description": "a.phone"
+	},
+	"email": {
+		"prefix": "email",
+		"body": "<a href=\"mailto:$0\" class=\"__email\"></a>",
+		"description": "a.email"
+	},
+	"a.btn": {
+		"prefix": "abtn",
+		"body": "<a href=\"#\" class=\"$0__btn btn\">Задать вопрос</a>",
+		"description": "a.btn"
+	},
+	"btn": {
+		"prefix": "btn",
+		"body": "<button type=\"button\" class=\"$0__btn btn\">Задать вопрос</button>",
+		"description": "btn"
+	},
+	"btn.down": {
+		"prefix": "btndown",
+		"body": "<button data-spoller type=\"button\" class=\"menu__arrow _icon-arrow-down\"></button>",
+		"description": "btndown"
+	},
+	"flex": {
+		"prefix": "flex",
+		"body": "<div class=\"$0__inner\">\n\t<div class=\"__column\">\n\t\t<div class=\"__item\">\n\t\t\t\n\t\t</div>\n\t</div>\n</div>",
+		"description": "flex-block"
+	},
+	"section": {
+		"prefix": "sec",
+		"body": "<section class=\"section\">\n\t<div class=\"_container\">\n\t\t$0\n\t</div>\n</section>",
+		"description": "section"
+	},
+	"in": {
+		"prefix": "in",
+		"body": "<input type=\"text\" name=\"\" class=\"input\">",
+		"description": "input"
+	},
+	"inp": {
+		"prefix": "inp",
+		"body": "<input autocomplete=\"off\" type=\"text\" name=\"form[]\" data-error=\"Ошибка\" data-value=\"\" class=\"input\">",
+		"description": "input"
+	},
+	"inpt": {
+		"prefix": "inpt",
+		"body": "<input autocomplete=\"off\" type=\"tel\" name=\"form[]\" data-value=\"Телефон\" class=\"input phone\">",
+		"description": "input phone"
+	},
+	"txta": {
+		"scope": "html,kit",
+		"prefix": "txta",
+		"body": "<textarea autocomplete=\"off\" name=\"form[]\" data-value=\"$1\" data-error=\"Ошибка\" class=\"input\"></textarea>",
+		"description": "txta"
+	},
+	"sel": {
+		"prefix": "sel",
+		"body": "<select name=\"form[]\" class=\"form\">\n\t<option value=\"1\" selected=\"selected\">Пункт №1</option>\n\t<option value=\"2\">Пункт №2</option>\n\t<option value=\"3\">Пункт №3</option>\n\t<option value=\"4\">Пункт №4</option>\n</select>",
+		"description": "sel"
+	},
+	"sel2": {
+		"prefix": "sel2",
+		"body": "<div class='select content-filter__select'>\n\t<div class='select-title'>\n\t\t<div class='select-title__arrow'></div>\n\t\t<div class='select-title__value'>Доллар США, USD</div>\n\t</div>\n\t<div class='select-options'>\n\t\t<div class='select-options-inside'>\n\t\t\t<div class='select-options__value'>Цена</div>\n\t\t\t<div class='select-options__value'>Название</div>\n\t\t</div>\n\t\t<input type='hidden' name='form[]'>\n\t</div>\n</div>",
+		"description": "sel2"
+	},
+	"opt": {
+		"prefix": "opt",
+		"body": "<div class=\"options\">\n\t<label class=\"options__item\">\n\t\t<input class=\"options__input\" checked type=\"radio\" value=\"1\" name=\"form[option]\">\n\t\t<span class=\"options__text\"><span>Text #1</span></span>\n\t</label>\n\t<label class=\"options__item\">\n\t\t<input class=\"options__input\" type=\"radio\" value=\"2\" name=\"form[option]\">\n\t\t<span class=\"options__text\"><span>Text #2</span></span>\n\t</label>\n</div>",
+		"description": "opt"
+	},
+	"opt2": {
+		"prefix": "opt2",
+		"body": "<div class='options'>\n\t<input value='1' type='hidden' name='form[]' />\n\t<div data-value='1' class='option active'>Text #1</div>\n\t<div data-value='2' class='option'>Text #2</div>\n</div>",
+		"description": "opt2"
+	},
+	"chk": {
+		"prefix": "chk",
+		"body": "<label for=\"check-1\" class=\"checkbox\">\n\t<input for=\"check-1\" data-error=\"Ошибка\" class=\"checkbox__input\" type=\"checkbox\" value=\"1\" name=\"form[]\">\n\t<span class=\"checkbox__text\">\n\t\t<span>Церсанит\n\t\t\t<span class=\"checkbox__value\">24</span>\n\t\t</span>\n\t</span>\n</label>",
+		"description": "chk"
+	},
+	"chk_a": {
+		"prefix": "chka",
+		"body": "<label class=\"checkbox\">\n\t<input data-error=\"Ошибка\" class=\"checkbox__input\" type=\"checkbox\" value=\"1\" name=\"form[]\">\n\t<span class=\"checkbox__text\"><span>${1:Я даю свое согласие на обработку персональных данных в соответствии с <a href=\"\">Условиями</a>}</span></span>\n</label>",
+		"description": "chk_a"
+	},
+	"ct": {
+		"prefix": "ct",
+		"body": "_container",
+		"description": "ct"
+	},
+	"cnt": {
+		"prefix": "cnt",
+		"body": "<div class=\"$1__container _container\">\n\t$2\n</div>",
+		"description": "container"
+	},
+	"bcnt": {
+		"prefix": "bcnt",
+		"body": "<div class='bigcontainer'></div>",
+		"description": "bigcontainer"
+	},
+	"ac_html": {
+		"scope": "html,kit,javascript",
+		"prefix": "ac",
+		"body": [
+			"_active"
+		],
+		"description": "ac_html"
+	},
+	"popuplink_html": {
+		"scope": "html,kit",
+		"prefix": "pl",
+		"body": [
+			"_popup-link"
+		],
+		"description": "popuplink_html"
+	},
+	"qa": {
+		"scope": "html,kit",
+		"prefix": "qa",
+		"body": "<div class=\"quantity\"><div class=\"quantity__button quantity__button_plus _icon-plus\"></div><div class=\"quantity__input\"><input autocomplete=\"off\" type=\"text\" name=\"form[]\" value=\"1\"></div><div class=\"quantity__button quantity__button_minus _icon-minus\"></div></div>",
+		"description": "qa"
+	},
+	// "quantity": {
+	// 	"prefix": "qty",
+	// 	"body": "<div class=\"quantity\">\n\t<div class=\"quantity__button quantity__button_plus\"></div>\n\t<div class=\"quantity__input\">\n\t\t<input autocomplete=\"off\" type=\"text\" name=\"form[]\" value=\"1\">\n\t</div>\n\t<div class=\"quantity__button quantity__button_minus\"></div>\n</div>",
+	// 	"description": "qty"
+	// },
+	"str": {
+		"prefix": "str",
+		"body": "<div class=\"${1:block}\">\n\t<div class='${1:block}__container _container'>\n\t\t<div class=\"${1:block}__title\"></div>\n\t\t<div class=\"${1:block}__row\">\n\t\t\t<div class=\"${1:block}__column\">\n\t\t\t\t$2\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>",
+		"description": "str"
+	},
+	"switch": {
+		"prefix": "switch",
+		"body": "<div class=\"switch-block\">\n\t<input type=\"checkbox\" id=\"toggle\" class=\"switch-block__input\"/>\n\t<label for=\"toggle\" class=\"switch-block__label\"></label>\n</div>",
+		"description": "switch"
+	},
+	"range": {
+		"prefix": "range",
+		"body": "<div class=\"price-filter\">\n\t<div data-range class=\"price-filter__body\">\n\t\t<div data-range-item class=\"price-filter__range\"></div>\n\t\t<div class=\"price-filter__inputs\">\n\t\t\t<label class=\"price-filter__input-label\">\n\t\t\t\t<div class=\"price-filter__input-text\">От</div>\n\t\t\t\t<input data-range-from=\"0\" autocomplete=\"off\" type=\"text\" name=\"form[]\"value=\"0\" class=\"price-filter__input\">\n\t\t\t</label>\n\t\t\t<label class=\"price-filter__input-label\">\n\t\t\t\t<div class=\"price-filter__input-text\">До</div>\n\t\t\t\t<input data-range-to=\"50000\" autocomplete=\"off\" type=\"text\" name=\"form[]\"value=\"50000\" class=\"price-filter__input\">\n\t\t\t</label>\n\t\t</div>\n\t</div>\n</div>",
+		"description": "range"
+	},
+	"rating": {
+		"scope": "html",
+		"prefix": "rating",
+		"body": [
+			"<div class=\"rating rating_set\">\n\t<div class=\"rating__body\">\n\t\t<div class=\"rating__active\"></div>\n\t\t<div class=\"rating__items\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"1\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"2\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"3\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"4\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"5\" name=\"rating\">\n\t\t</div>\n\t</div>\n\t<div class=\"rating__value\">3.6</div>\n</div>"
+		],
+		"description": "HTML код рейтинга"
+	},
+	"spollers": {
+		"scope": "html",
+		"prefix": "spollers",
+		"body": [
+			"<div data-spollers class=\"spollers\">\n\t<div class=\"spollers__item\">\n\t\t<button type=\"button\" data-spoller class=\"spollers__title\">Заголовок спойлера</button>\n\t\t<div class=\"spollers__body\">Контент спойлера</div>\n\t</div>\n</div>"
+		],
+		"description": "HTML код спойлеров"
+	},
+	"tabs": {
+		"scope": "html",
+		"prefix": "tabs",
+		"body": [
+			"<div data-tabs class=\"${1:tabs}\">\n\t<nav data-tabs-titles class=\"${1:tabs}__navigation\">\n\t\t<button type=\"button\" class=\"${1:tabs}__title _tab-active\">Таб №1</button>\n\t\t<button type=\"button\" class=\"${1:tabs}__title\">Таб №2</button>\n\t\t<button type=\"button\" class=\"${1:tabs}__title\">Таб №3</button>\n\t</nav>\n\t<div data-tabs-body class=\"${1:tabs}__content\">\n\t\t<div class=\"${1:tabs}__body\">\n\t\t\tСодержимое первого таба\n\t\t</div>\n\t\t<div class=\"${1:tabs}__body\">\n\t\t\tСодержимое второго таба\n\t\t</div>\n\t\t<div class=\"${1:tabs}__body\">\n\t\t\tСодержимое третьего таба\n\t\t</div>\n\t</div>\n</div>"
+		],
+		"description": "HTML код табов"
+	},
+	"show More": {
+		"scope": "html",
+		"prefix": "showmore",
+		"body": [
+			"<div data-showmore class=\"${1:block}\">\n\t<div data-showmore-content class=\"${1:block}__content\"></div>\n\t<button hidden data-showmore-button type=\"button\" class=\"${1:block}__more\"><span>Показать еще</span><span>Скыть</span></button>\n</div>"
+		],
+		"description": "HTML код блока 'показать еще'"
+	},
+	"swiper": {
+		"scope": "html",
+		"prefix": "swiper",
+		"body": [
+			"<div class=\"${1:имя-блока}__slider swiper\">\n\t<div class=\"${1:имя-блока}__wrapper swiper-wrapper\">\n\t\t<div class=\"${1:имя-блока}__slide swiper-slide\"></div>\n\t</div>\n</div>"
+		],
+		"description": "HTML код слайдера Swiper"
+	},
+	"swiper Full": {
+		"scope": "html",
+		"prefix": "swiperfull",
+		"body": [
+			"<!-- Оболочка слайдера -->\n<div class=\"${1:имя-блока}__slider swiper\">\n\t<!-- Двигающееся часть слайдера -->\n\t<div class=\"${1:имя-блока}__wrapper swiper-wrapper\">\n\t\t<!-- Слайд -->\n\t\t<div class=\"${1:имя-блока}__slide swiper-slide\"></div>\n\t</div>\n\t<!-- Если нужна пагинация -->\n\t<div class=\"swiper-pagination\"></div>\n\t<!-- Если нужна навигация (влево/вправо) -->\n\t<button type=\"button\" class=\"swiper-button-prev\"></button>\n\t<button type=\"button\" class=\"swiper-button-next\"></button>\n\t<!-- Если нужен скролбар -->\n\t<div class=\"swiper-scrollbar\"></div>\n</div>"
+		],
+		"description": "HTML код слайдера Swiper"
+	},
+	"quantity": {
+		"scope": "html",
+		"prefix": "quantity",
+		"body": "<div class=\"quantity\">\n\t<button type=\"button\" class=\"quantity__button quantity__button_plus\"></button>\n\t<div class=\"quantity__input\">\n\t\t<input autocomplete=\"off\" type=\"text\" name=\"form[]\" value=\"1\">\n\t</div>\n\t<button type=\"button\" class=\"quantity__button quantity__button_minus\"></button>\n</div>",
+		"description": "Добавняет HTML формы с кол-вом"
+	},
+	"add tooltip": {
+		"scope": "html",
+		"prefix": "tip",
+		"body": [
+			"data-tippy-content=\"Подсказка\""
+		],
+		"description": "Добавляет текст-подсказку (Tippy)"
+	},
+	"add data-required": {
+		"scope": "html",
+		"prefix": "req",
+		"body": [
+			"data-required"
+		],
+		"description": "Добавляет атрибут к полю формы"
+	},
+	"add dynamic adapt": {
+		"scope": "html",
+		"prefix": "da",
+		"body": [
+			"data-da=\".${1:имя блока}, 768\""
+		],
+		"description": "Добавляет атрибут динамического адаптива"
+	},
+	"add image IBG": {
+		"scope": "html",
+		"prefix": "ibg",
+		"body": [
+			"<div class=\"${1:имя блока}__image-ibg\"><img data-src=\"@img$2\" alt=\"\"></div>"
+		],
+		"description": "Добавляет объект с картинкой и классом IBG"
+	},
+	"add Link with image IBG": {
+		"scope": "html",
+		"prefix": "ibga",
+		"body": [
+			"<a href=\"\" class=\"${1:имя блока}__image-ibg\"><img data-src=\"@img$2\" alt=\"\"></a>"
+		],
+		"description": "Добавляет ссылку с картинкой и классом IBG"
+	},
+	// scss =====================================================================================
+	// Отступы 
+	"pp": {
+		"prefix": "pp",
+		"body": [
+			"padding: 0px 0px 0px 0px;"
+		],
+		"description": "padding"
+	},
+	"ppp": {
+		"prefix": "ppp",
+		"body": [
+			"padding: 0px $1px;"
+		],
+		"description": "padding2"
+	},
+	"ppt": {
+		"prefix": "ppt",
+		"body": [
+			"padding: $1px 0px 0px 0px;"
+		],
+		"description": "padding top"
+	},
+	"ppb": {
+		"prefix": "ppb",
+		"body": [
+			"padding: 0px 0px $1px 0px;"
+		],
+		"description": "padding bottom"
+	},
+	"ppl": {
+		"prefix": "ppl",
+		"body": [
+			"padding: 0px 0px 0px $1px;"
+		],
+		"description": "padding left"
+	},
+	"ppr": {
+		"prefix": "ppr",
+		"body": [
+			"padding: 0px $1px 0px 0px;"
+		],
+		"description": "padding right"
+	},
+	"mm": {
+		"prefix": "mm",
+		"body": [
+			"margin: 0px 0px 0px 0px;"
+		],
+		"description": "margin"
+	},
+	"mr": {
+		"prefix": "mr",
+		"body": [
+			"margin: 0px 0px 0px auto;"
+		],
+		"description": "margin"
+	},
+	"mmm": {
+		"prefix": "mmm",
+		"body": [
+			"margin: 0px -$1px;"
+		],
+		"description": "margin2"
+	},
+	"mmt": {
+		"prefix": "mmt",
+		"body": [
+			"margin: $1px 0px 0px 0px;"
+		],
+		"description": "margin top"
+	},
+	"mmb": {
+		"prefix": "mmb",
+		"body": [
+			"margin: 0px 0px $1px 0px;"
+		],
+		"description": "margin bottom"
+	},
+	"mfont": {
+		"prefix": "mf",
+		"body": [
+			"margin: 0px 0px $1px / 24px *1em 0px;"
+		],
+		"description": "margin font"
+	},
+	"mml": {
+		"prefix": "mml",
+		"body": [
+			"margin: 0px 0px 0px $1px;"
+		],
+		"description": "margin left"
+	},
+	"mmr": {
+		"prefix": "mmr",
+		"body": [
+			"margin: 0px $1px 0px 0px;"
+		],
+		"description": "margin right"
+	},
+	"mu": {
+		"prefix": "mu",
+		"body": [
+			"margin: 0px auto;"
+		],
+		"description": "margin center"
+	},
+	"mc": {
+		"prefix": "mc",
+		"body": [
+			"margin:auto;"
+		],
+		"description": "margin center"
+	},
+	// Ширина Высота
+	"wa": {
+		"prefix": "wa",
+		"body": [
+			"width: auto;"
+		],
+		"description": "wa"
+	},
+	"w100": {
+		"prefix": "w100",
+		"body": [
+			"width: 100%;"
+		],
+		"description": "width 100"
+	},
+	"mw100": {
+		"prefix": "mw1",
+		"body": [
+			"max-width: 100%;"
+		],
+		"description": "max-width 100"
+	},
+	"ha": {
+		"prefix": "ha",
+		"body": [
+			"height: auto;"
+		],
+		"description": "ha"
+	},
+	"h100": {
+		"prefix": "h100",
+		"body": [
+			"height: 100%;"
+		],
+		"description": "height 100"
+	},
+	"mh100": {
+		"prefix": "mh1",
+		"body": [
+			"max-height: 100%;"
+		],
+		"description": "max-height 100"
+	},
+	// Позиционирование 
+	"psa": {
+		"prefix": "psa",
+		"body": [
+			"position: absolute; \ntop: 0%; \nleft: 0%; \nz-index: 5; \nwidth: 100%; \nheight: 100%;"
+		],
+		"description": "position absolute"
+	},
+	"psf": {
+		"prefix": "psf",
+		"body": [
+			"position: fixed; \ntop: 0%; \nleft: 0%; \nz-index: 5; \nwidth: 100%; \nheight: 100%; \nbackground-color: #fff;"
+		],
+		"description": "position fixed"
+	},
+	"pss": {
+		"prefix": "pss",
+		"body": [
+			"position: sticky; \ntop: 10%; \nleft: 0%; \nz-index: 5;"
+		],
+		"description": "position absolute"
+	},
+	// Радиус 
+	"br5": {
+		"scope": "css,scss",
+		"prefix": "br5",
+		"body": [
+			"border-radius: 50%;"
+		],
+		"description": "br5"
+	},
+	"brp": {
+		"scope": "css,scss",
+		"prefix": "brp",
+		"body": [
+			"border-radius: $1px;"
+		],
+		"description": "br px"
+	},
+	// Тень 
+	"bs": {
+		"prefix": "bs",
+		"body": [
+			"box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);"
+		],
+		"description": "bs"
+	},
+	// Цвета 
+	"c0": {
+		"prefix": "c0",
+		"body": [
+			"color:#000;"
+		],
+		"description": "c0"
+	},
+	"color": {
+		"prefix": "c",
+		"body": [
+			"color: #${1:fff};"
+		],
+		"description": "color"
+	},
+	"bg+": {
+		"prefix": "bg+",
+		"body": [
+			"background: url('../img/$0') 0 0 no-repeat;"
+		],
+		"description": "bg+"
+	},
+	// rem, em 
+	"rem": {
+		"prefix": "rem",
+		"body": [
+			"rem($0);"
+		],
+		"description": "rem"
+	},
+	"em": {
+		"prefix": "em",
+		"body": [
+			"em($0);"
+		],
+		"description": "em"
+	},
+	// Transform 
+	"aa": {
+		"prefix": "aa",
+		"body": [
+			"transition: all 0.${1:3}s ease 0s;$2"
+		],
+		"description": "aa"
+	},
+	"tro": {
+		"prefix": "tro",
+		"body": [
+			"transform: rotate(-${1:180}deg);"
+		],
+		"description": "tro"
+	},
+	"tsc": {
+		"prefix": "tsc",
+		"body": [
+			"transform: scale(${1:1});"
+		],
+		"description": "tsc"
+	},
+	"ttr": {
+		"prefix": "ttr",
+		"body": [
+			"transform: translate(${1:0}px,${2:0}px);$3"
+		],
+		"description": "ttr"
+	},
+	// "att": {
+	// 	"prefix": "att",
+	// 	"body": [
+	// 		"transform: translate(0px,0px) rotate(0deg) scale(1) skew(0,0);"
+	// 	],
+	// 	"description": "at"
+	// },
+	// Псевдо
+	"fc": {
+		"prefix": "fc",
+		"body": [
+			"&:first-child{\n\t$0\n}"
+		],
+		"description": "fc"
+	},
+	"nc": {
+		"prefix": "nc",
+		"body": [
+			"&:nth-child($0)\t{\n}"
+		],
+		"description": "nc"
+	},
+	"lc": {
+		"prefix": "lc",
+		"body": [
+			"&:last-child{\n\t$0\n}"
+		],
+		"description": "lc"
+	},
+	"lcm": {
+		"prefix": "lcm",
+		"body": [
+			"&:last-child {\n\t margin-bottom: 0px;\n}"
+		],
+		"description": "lcm"
+	},
+	"not": {
+		"prefix": "not",
+		"body": [
+			"&:not(:last-child){\n\t$0\n}"
+		],
+		"description": "not"
+	},
+	// Before After 
+	"ba": {
+		"prefix": "ba",
+		"body": [
+			"&::before,&::after{\n\tcontent:''; \n\tfloat: left; \n\tflex: 0 0 60px; \n\theight: 18px; \n\tmargin-right: 10px; \n\tbackground-size: 100%; \n\tbackground-position: 0 0; \n\tbackground-repeat: no-repeat; \n\t$0\n}"
+		],
+		"description": "ba"
+	},
+	"a": {
+		"prefix": "a",
+		"body": [
+			"&::after{\n\tcontent:''; \n\tfloat: left; \n\tflex: 0 0 60px; \n\theight: 18px; \n\tmargin-right: 10px; \n\tbackground-size: 100%; \n\tbackground-position: 0 0; \n\tbackground-repeat: no-repeat; \n\t$0\n}"
+		],
+		"description": "after"
+	},
+	"bf": {
+		"prefix": "b",
+		"body": [
+			"&::before{\n\tcontent:''; \n\tfloat: left; \n\tflex: 0 0 60px; \n\theight: 18px; \n\tmargin-right: 10px; \n\tbackground-size: 100%; \n\tbackground-position: 0 0; \n\tbackground-repeat: no-repeat; \n\t$0\n}"
+		],
+		"description": "before"
+	},
+	// Hover 
+	"hv": {
+		"prefix": "hv",
+		"body": [
+			"&:hover{\n\t$0\n}"
+		],
+		"description": "hv"
+	},
+	"any": {
+		"prefix": "hhv",
+		"body": [
+			"@media (any-hover: hover){\n\t &:hover { \n\t $1 \n  } \n}"
+		],
+		"description": "any"
+	},
+	// Flex 
+	"dif": {
+		"prefix": "dif",
+		"body": [
+			"display: inline-flex;"
+		],
+		"description": "dif"
+	},
+	"jcs": {
+		"prefix": "jcs",
+		"body": [
+			"justify-content: space-between;"
+		],
+		"description": "jcs"
+	},
+	"fww": {
+		"prefix": "fww",
+		"body": [
+			"flex-wrap: wrap;"
+		],
+		"description": "fww"
+	},
+	"fwn": {
+		"prefix": "fwn",
+		"body": [
+			"flex-wrap: nowrap;"
+		],
+		"description": "fww"
+	},
+	"fdc": {
+		"prefix": "fdc",
+		"body": [
+			"flex-direction: column;"
+		],
+		"description": "fdc"
+	},
+	"fdr": {
+		"prefix": "fdr",
+		"body": [
+			"flex-direction: row;"
+		],
+		"description": "fdr"
+	},
+	"flex%": {
+		"prefix": "f%",
+		"body": [
+			"flex: 0px 0px $1px / $2maxWidthContainer * 100%;"
+		],
+		"description": "flex %"
+	},
+	"f00": {
+		"prefix": "f00",
+		"body": [
+			"flex: 0 0 $1px;"
+		],
+		"description": "f00"
+	},
+	"f25": {
+		"prefix": "f25",
+		"body": [
+			"flex: 0 1 25%;"
+		],
+		"description": "f25"
+	},
+	"f33": {
+		"prefix": "f33",
+		"body": [
+			"flex: 0 1 33.333%;"
+		],
+		"description": "f33"
+	},
+	"f50": {
+		"prefix": "f50",
+		"body": [
+			"flex: 0 1 50%;"
+		],
+		"description": "f50"
+	},
+	"f100": {
+		"prefix": "f100",
+		"body": [
+			"flex: 0 1 100%;"
+		],
+		"description": "f100"
+	},
+	"f11a": {
+		"prefix": "f11a",
+		"body": [
+			"flex: 1 1 auto;"
+		],
+		"description": "f11a"
+	},
+	"ord": {
+		"prefix": "ord",
+		"body": [
+			"order: \t${1:1};"
+		],
+		"description": "fbo"
+	},
+	// grid
+	"gra": {
+		"prefix": "gra",
+		"body": [
+			"display: grid; \ngrid-template-columns: auto; \ngrid-auto-flow: column; \nalign-items: center; \ngap: rem(32);"
+		],
+		"description": "grid auto"
+	},
+	"grs": {
+		"prefix": "grs",
+		"body": [
+			"display: grid; \ngrid-template-columns: rem(325) 1fr; \ngap: rem(30);"
+		],
+		"description": "grid setka"
+	},
+	"grc": {
+		"prefix": "grc",
+		"body": [
+			"display: grid; \ngrid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr)); \ngap: rem(10);"
+		],
+		"description": "grid card"
+	},
+	"gap": {
+		"prefix": "gap",
+		"body": [
+			"gap: $1px;"
+		],
+		"description": "gap"
+	},
+	"gapr": {
+		"prefix": "gapr",
+		"body": [
+			"gap: rem($1);"
+		],
+		"description": "gap rem"
+	},
+	// "hvu": {
+	// 	"prefix": "hvu",
+	// 	"body": [
+	// 		"&:hover{text-decoration: underline;}"
+	// 	],
+	// 	"description": "hvu"
+	// },
+	// "hvn": {
+	// 	"prefix": "hvn",
+	// 	"body": [
+	// 		"&:hover{text-decoration: none;}"
+	// 	],
+	// 	"description": "hvn"
+	// },
+	"sa": {
+		"prefix": "sa",
+		"body": [
+			".slick-arrow{\n\t&.slick-prev{}\n\t&.slick-next{}\n}"
+		],
+		"description": "sa"
+	},
+	"bt": {
+		"prefix": "bt",
+		"body": [
+			"body.touch &{\n\t$1\n}"
+		],
+		"description": "bt"
+	},
+	"kf": {
+		"prefix": "kf",
+		"body": "@keyframes ${1:name} {\n\t0% {\n\t\t$2\n\t}\n\t100% {\n\t\t$3\n\t}\n}",
+		"description": "kf"
+	},
+	"sp": {
+		"prefix": "sp",
+		"body": "//========================================================================================================================================================\n$1",
+		"description": "sp"
+	},
+	"lhc": {
+		"prefix": "lhc",
+		"body": "line-height: $1 / $2 * 100%;",
+		"description": "lhc"
+	},
+	"lhm": {
+		"prefix": "lhm",
+		"body": "line-height: math.div($1, $2);",
+		"description": "lhm"
+	},
+	"nowrap": {
+		"prefix": "wsnw",
+		"body": "white-space: nowrap;",
+		"description": "nowrap"
+	},
+	// Класс active 
+	"acc": {
+		"prefix": "acc",
+		"body": [
+			"&:active{\n\t$0\n}"
+		],
+		"description": "acc"
+	},
+	"ac_css": {
+		"scope": "scss,css",
+		"prefix": "ac",
+		"body": [
+			"&._active{\n\t$0\n}"
+		],
+		"description": "ac_css"
+	},
+	// Media 
+	"md": {
+		"prefix": "md",
+		"body": [
+			"@media (max-width: $1px){\n\t $2 \n}"
+		],
+		"description": "md"
+	},
+	"mmd": {
+		"prefix": "mmd",
+		"body": [
+			"@media (min-width: $1px){\n\t $2 \n}"
+		],
+		"description": "md"
+	},
+	// "@media max": {
+	// 	"prefix": "md",
+	// 	"body": [
+	// 		"@media (max-width: em($1)){\n\t $2 \n}"
+	// 	],
+	// 	"description": "Добавляет медиазапрос max-width c переводом в EM"
+	// },
+	// "@media min": {
+	// 	"prefix": "mmd",
+	// 	"body": [
+	// 		"@media (min-width:em($1)){\n\t $2 \n}"
+	// 	],
+	// 	"description": "Добавляет медиазапрос min-width c переводом в EM"
+	// },
+	// Анимация 
+	"an": {
+		"prefix": "an",
+		"body": [
+			"animation:${1:name} 1s infinite linear;"
+		],
+		"description": "aa"
+	},
+	// Адаптивное свойство =============================
+	"pi": {
+		"prefix": "pi",
+		"body": [
+			"@include adaptiv-value(\"padding\", 60, 20, 0);"
+		],
+		"description": "padding"
+	},
+	"pil": {
+		"prefix": "pil",
+		"body": [
+			"@include adaptiv-value(\"padding-left\", 60, 20, 0);"
+		],
+		"description": "padding"
+	},
+	"pir": {
+		"prefix": "pir",
+		"body": [
+			"@include adaptiv-value(\"padding-right\", 60, 20, 0);"
+		],
+		"description": "padding"
+	},
+	"pit": {
+		"prefix": "pit",
+		"body": [
+			"@include adaptiv-value(\"padding-top\", 60, 20, 0);"
+		],
+		"description": "padding"
+	},
+	"pib": {
+		"prefix": "pib",
+		"body": [
+			"@include adaptiv-value(\"padding-bottom\", 60, 20, 0);"
+		],
+		"description": "padding"
+	},
+	"addFont": {
+		"scope": "scss",
+		"prefix": "addf",
+		"body": [
+			"@include font(\"$1\",\"$2\",\"400\",\"normal\");"
+		],
+		"description": "AddFont"
+	},
+	"adaptFont": {
+		"scope": "scss",
+		"prefix": "af",
+		"body": [
+			"@include adaptiv-font($1,$2,1);"
+		],
+		"description": "AdaptFont"
+	},
+	"av": {
+		"prefix": "av",
+		"body": [
+			"@include adaptiv-value(\"font-size\", $2, $3, $4);"
+		],
+		"description": "Адаптивное свойство (clamp): CSS-свойство, начальное значение, конечное значение, ширина начальная, ширина конечная"
+	},
+	// "EM": {
+	// 	"scope": "scss",
+	// 	"prefix": "em",
+	// 	"body": [
+	// 		"em($1,$2)"
+	// 	],
+	// 	"description": "Вызов миксина перевода в EM"
+	// },
+	// "REM": {
+	// 	"scope": "scss",
+	// 	"prefix": "rem",
+	// 	"body": [
+	// 		"rem($1)"
+	// 	],
+	// 	"description": "Вызов миксина перевода в REM"
+	// },
+	"percent": {
+		"scope": "scss",
+		"prefix": "prc",
+		"body": [
+			"percent($1,$2)"
+		],
+		"description": "Вызов миксина перевода в %"
+	},
+	"percent padding": {
+		"scope": "scss",
+		"prefix": "pbp",
+		"body": [
+			"padding-bottom: percent($1,$2);"
+		],
+		"description": "Отступ вниз с указанием %"
+	},
+	"divade": {
+		"scope": "scss",
+		"prefix": "di",
+		"body": [
+			"math.div($1,$2)"
+		],
+		"description": "Деление чисел"
+	},
+	"upbtns": {
+		"prefix": "upbtns",
+		"body": [
+			".upbtn { \n\topacity: 0.8;\n\tz-index: 9999;\n\twidth: 60px;\n\theight: 60px;\n\tposition: fixed;\n\tbottom: -80px;\n\tright: 20px;\n\tcursor: pointer;\n\tborder: 3px solid #BFE2FF;\n\ttransition: all .7s ease-in-out;\n\tbackground-position: center center;\n\tbackground-repeat: no-repeat;\n\tbackground-color: #337AB7;\n\tbackground-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDQ0NC44MTkgNDQ0LjgxOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDQ0LjgxOSA0NDQuODE5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTQzMy45NjgsMjc4LjY1N0wyNDguMzg3LDkyLjc5Yy03LjQxOS03LjA0NC0xNi4wOC0xMC41NjYtMjUuOTc3LTEwLjU2NmMtMTAuMDg4LDAtMTguNjUyLDMuNTIxLTI1LjY5NywxMC41NjYgICBMMTAuODQ4LDI3OC42NTdDMy42MTUsMjg1Ljg4NywwLDI5NC41NDksMCwzMDQuNjM3YzAsMTAuMjgsMy42MTksMTguODQzLDEwLjg0OCwyNS42OTNsMjEuNDExLDIxLjQxMyAgIGM2Ljg1NCw3LjIzLDE1LjQyLDEwLjg1MiwyNS42OTcsMTAuODUyYzEwLjI3OCwwLDE4Ljg0Mi0zLjYyMSwyNS42OTctMTAuODUyTDIyMi40MSwyMTMuMjcxTDM2MS4xNjgsMzUxLjc0ICAgYzYuODQ4LDcuMjI4LDE1LjQxMywxMC44NTIsMjUuNywxMC44NTJjMTAuMDgyLDAsMTguNzQ3LTMuNjI0LDI1Ljk3NS0xMC44NTJsMjEuNDA5LTIxLjQxMiAgIGM3LjA0My03LjA0MywxMC41NjctMTUuNjA4LDEwLjU2Ny0yNS42OTNDNDQ0LjgxOSwyOTQuNTQ1LDQ0MS4yMDUsMjg1Ljg4NCw0MzMuOTY4LDI3OC42NTd6IiBmaWxsPSIjRkZGRkZGIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==)\n}\n@media (any-hover: hover) {\n\t.upbtn:hover {\n\t\topacity: 1;\n\t\tbackground-color: #337AB7;\n\t}\n}"
+		],
+		"description": "upbtnStyle"
+	},
+	// Java Script =================================================================================================
+	"getElementsByClassName": {
+		"scope": "javascript,typescript",
+		"prefix": "dc",
+		"body": [
+			"const ${1:item} = document.getElementsByClassName('$2');"
+		],
+		"description": "getElementsByClassName"
+	},
+	"document.querySelector": {
+		"scope": "javascript,typescript",
+		"prefix": "dq",
+		"body": [
+			"const ${item} = document.querySelector('.$2');"
+		],
+		"description": "document.querySelector"
+	},
+	"document.querySelectorAll": {
+		"scope": "javascript,typescript",
+		"prefix": "dqa",
+		"body": [
+			"const ${item} =document.querySelectorAll('.$2');"
+		],
+		"description": "document.querySelectorAll"
+	},
+	"getElementsById": {
+		"scope": "javascript,typescript",
+		"prefix": "get",
+		"body": [
+			"const ${1:item} = document.getElementById('$2');"
+		],
+		"description": "getElementsById"
+	},
+	"js_click": {
+		"scope": "javascript,typescript",
+		"prefix": "click",
+		"body": [
+			"${1:document}.addEventListener(\"click\", function (e) {\n\t$2\n});"
+		],
+		"description": "document.querySelectorAll"
+	},
+	"Print to console": {
+		"scope": "javascript,typescript",
+		"prefix": "log",
+		"body": [
+			"console.log('$1');"
+		],
+		"description": "Log output to console"
+	},
+	"if else": {
+		"scope": "javascript,typescript",
+		"prefix": "ifs",
+		"body": [
+			"if ($2) {\n\t\n}"
+		],
+		"description": "if else"
+	},
+	"if clientWidth": {
+		"scope": "javascript,typescript",
+		"prefix": "ifw",
+		"body": [
+			"if (document.documentElement.clientWidth > $1) {\n\t$2\n}"
+		],
+		"description": "if clientWidth"
+	},
+	"function Declaration": {
+		"scope": "javascript,typescript",
+		"prefix": "func",
+		"body": [
+			"function Init() {\n\t$2\n}"
+		],
+		"description": "function Declaration"
+	},
+	"Arrow Functions": {
+		"scope": "javascript,typescript",
+		"prefix": "afunc",
+		"body": [
+			"const handleClick = () => {\n\t$2\n}"
+		],
+		"description": "Arrow Function"
+	},
+	"forEach": {
+		"scope": "javascript,typescript",
+		"prefix": "fore",
+		"body": [
+			"${1:items}.forEach(item => {\n\t$2\n});",
+		],
+		"description": "forEach"
+	},
+	"addClass": {
+		"scope": "javascript,typescript",
+		"prefix": "addc",
+		"body": [
+			"${1:item}.classList.add('_active');"
+		],
+		"description": "addClass"
+	},
+	"removeClass": {
+		"scope": "javascript,typescript",
+		"prefix": "rdc",
+		"body": [
+			"${1:item}.classList.remove('_active');"
+		],
+		"description": "removeClass"
+	},
+	"toggleClass": {
+		"scope": "javascript,typescript",
+		"prefix": "tog",
+		"body": [
+			"${1:item}.classList.toggle('_active');"
+		],
+		"description": "toggleClass"
+	},
+	"e.prevent": {
+		"scope": "javascript,typescript",
+		"prefix": "eprev",
+		"body": [
+			"e.preventDefault();"
+		],
+		"description": "e.prevent"
+	},
+	"stopProp": {
+		"scope": "javascript,typescript",
+		"prefix": "sprop",
+		"body": [
+			"event.stopPropagation();"
+		],
+		"description": "stopProp"
+	},
+	"input reset": {
+		"scope": "javascript,typescript",
+		"prefix": "inpres",
+		"body": [
+			"${1:searchFormInput}.value = '';"
+		],
+		"description": "input reset"
+	},
+	// Jquerry ================================================================================================
+	"jq_ready": {
+		"prefix": "ready",
+		"body": "$(function () {\n\t$0\n});",
+		"description": "jq_ready"
+	},
+	"jq$": {
+		"prefix": "$",
+		"body": "$('$0')",
+		"description": "jq"
+	},
+	"jq_this": {
+		"prefix": "this",
+		"body": "$(this)",
+		"description": "jq"
+	},
+	"upbtn": {
+		"prefix": "upbtn",
+		"body": "$('body').append('<div class='upbtn'></div>');\n\t$(window).scroll(function() {\n\t\tif ($(this).scrollTop() > 100) {\n\t\t\t$('.upbtn').css({\n\t\t\t\tbottom: '15px'\n\t\t\t});\n\t\t} else {\n\t\t\t$('.upbtn').css({\n\t\t\t\tbottom: '-80px'\n\t\t\t});\n\t\t}\n\t});\n$('.upbtn').on('click',function() {\n\t$('html, body').animate({\n\t\tscrollTop: 0\n\t}, 500);\nreturn false; \n});",
+		"description": "upbtn"
+	},
+	// Bitrix =================================================================================================
+	"admin": {
+		"prefix": "admin",
+		"body": "<? \n global \\$USER; \n\t if (\\$USER->IsAdmin()) {?>\n \t $0 \n<? } ?>",
+		"description": "admin_bitrix"
+	},
+	"img_bitrix": {
+		"prefix": "imgbt",
+		"body": "<img src=\"<?=SITE_TEMPLATE_PATH?>/img/$0>\" loading=\"lazy\" alt=\"Картинка\">",
+		"description": "img_bitrix"
+	},
+	"img_bg_bt": {
+		"prefix": "imgbg",
+		"body": "style=\"background-image: url('<?=SITE_TEMPLATE_PATH?>/img/$0>');\"",
+		"description": "img_bg_bitrix"
+	},
+}
