@@ -60,7 +60,11 @@ export { deployFTP }
 export { deployZIP }
 
 // Выполнение сценария по умолчанию
-gulp.task('default', development);
+// gulp.task('default', development);
+
+gulp.task('default', async () =>
+	console.log('This is default task!')
+);
 
 
 
